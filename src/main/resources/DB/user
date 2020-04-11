@@ -1,0 +1,19 @@
+CREATE DATABASE ecommerce;
+CREATE TABLE user
+(
+    id INT PRIMARY KEY NOT NULL,
+    nom VARCHAR(100) DEFAULT NULL,
+    prenom VARCHAR(100) DEFAULT NULL,
+    email VARCHAR(255) DEFAULT NULL,
+    date_naissance DATE DEFAULT NULL,
+    pays VARCHAR(255) DEFAULT NULL,
+    ville VARCHAR(255) DEFAULT NULL,
+    code_postal VARCHAR(5) DEFAULT NULL
+);
+
+INSERT INTO user (id, nom, prenom, email, date_naissance, pays, ville, code_postal)
+ VALUES
+ (1, 'Rébecca', 'Armand', 'armand@gmail.com', localtime(), 'Paris', 'Saint-Didier-des-Bois', 94400),
+ (2, 'Aimée', 'Hebert', 'hebert@gmail.com', localtime(), 'Paris', 'Marigny-le-Châtel', 78018),
+ (3, 'Marielle', 'Ribeiro', 'ribeiro@gmail.com', localtime(), 'Paris', 'Maillères', 78017),
+ (4, 'Hilaire', 'Savary','savary@gmail.com', localtime(), 'Paris', 'Conie-Molitard', 78007);
